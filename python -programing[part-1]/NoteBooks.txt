@@ -1,0 +1,68 @@
+=================
+Before The Start
+=================
+1.Open File. [Learn Code > Python > Tamim Shahriar]
+2.Open Terminal. [ ]
+3.Open Book.[Tamim Shahriar]
+===================
+Learning Speed : Start Date: 12/05/2022
+================== 
+
+//Day1 
+CP:02 Input Output
+Date: 10/04/2022
+ 1.hello.py [s-01] 
+ 
+//Day2
+CP:03 Variable, Data Type
+Date: 23/05/2022
+ 01.variable.py [s-01] 
+
+//Day3
+CP:04 Conditional Logic
+Date: 30/05/2022
+ 01.comparison.py [s-01] 
+ 02.condition.py [s-02] 
+ 03.compareNumbe.py[s-03]
+ 04.leapYear.py[s-04]
+
+//Day3
+CP:05 Turtler
+Date: 30/05/2022
+ 01.turtler.py [s-01] 
+ 
+//Day4
+CP:06 Loop
+Date: 07/06/2022
+ 01.loop.py [s-01]
+ 02.nastedLoop.py [s-02]
+ 03.while.py
+
+//Day4
+CP:07 Function
+Date: 07/06/2022
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
