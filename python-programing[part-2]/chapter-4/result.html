@@ -1,0 +1,2422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        
+            <title>Blog - freeCodeCamp.org</title>
+        
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+            <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Mono:wght@400;700&display=swap">
+        
+
+        
+        
+        
+
+        
+        <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/news/assets/css/global-26e2f3cde9.css" />
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/screen-5a4f9d5c91.css" />
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/search-bar-124f5f949c.css" />
+
+        
+        <script defer src="https://cdn.freecodecamp.org/news-assets/algolia/algoliasearch-3-33-0/algoliasearch.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/algolia/autocomplete-0-36-0/autocomplete.min.js"></script>
+
+        
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/dayjs.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/localizedFormat.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/relativeTime.min.js"></script>
+
+        
+        
+            <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/locale/en.min.js"></script>
+        
+
+        
+        <script>let client,index;document.addEventListener("DOMContentLoaded",(()=>{client=algoliasearch("QMJYL5WYTI","89770b24481654192d7a5c402c6ad9a0"),index=client.initIndex("news")})),document.addEventListener("DOMContentLoaded",(()=>{const e=window.screen.width,t=window.screen.height,n=e>=767&&t>=768?8:5,o=document.getElementById("search-form"),s=document.getElementById("search-input"),a=document.getElementById("dropdown-container");let i,d,c;s.addEventListener("input",(e=>{i=e.target.value})),o.addEventListener("submit",(e=>{e.preventDefault(),function(){if(d=document.getElementsByClassName("aa-cursor")[0],d&&i){const e=d.querySelector("a").href;window.location.assign(e)}else!d&&i&&c&&window.location.assign(`https://www.freecodecamp.org/news/search?query=${i}`)}()}));const l=autocomplete("#search-input",{hint:!1,keyboardShortcuts:["s",191],openOnFocus:!0,appendTo:a,debug:!0},[{source:autocomplete.sources.hits(index,{hitsPerPage:n}),debounce:250,templates:{suggestion:e=>(c=!0,`\n            <a href="${e.url}">\n              <div class="algolia-result">\n                <span>${e._highlightResult.title.value}</span>\n              </div>\n            </a>\n          `),empty:()=>(c=!1,'\n            <div class="aa-suggestion footer-suggestion no-hits-footer">\n              <div class="algolia-result">\n                <span>\n                  No tutorials found\n                </span>\n              </div>\n            </div>\n          '),footer:e=>{if(!e.isEmpty)return`\n              <div class="aa-suggestion footer-suggestion">\n                <a id="algolia-footer-selector" href="https://www.freecodecamp.org/news/search?query=${i}">\n                  <div class="algolia-result algolia-footer">\n                    See all results for ${i}\n                  </div>\n                </a>\n              </div>\n            `}}}]).on("autocomplete:selected",((e,t,n,o)=>{d=t?t.url:`https://www.freecodecamp.org/news/search?query=${i}`,"click"!==o.selectionMethod&&"tabKey"!==o.selectionMethod&&c&&window.location.assign(d)}));document.addEventListener("click",(e=>{e.target!==s&&l.autocomplete.close()}))})),document.addEventListener("DOMContentLoaded",(()=>{dayjs.extend(dayjs_plugin_localizedFormat),dayjs.extend(dayjs_plugin_relativeTime),dayjs.locale("en")}));const isAuthenticated=document.cookie.split(";").some((e=>e.trim().startsWith("jwt_access_token="))),isDonor=document.cookie.split(";").some((e=>e.trim().startsWith("isDonor=true")));</script>
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+        <link rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" type="image/png">
+        
+        
+            <link rel="canonical" href="https://www.freecodecamp.org/news/tag/blog/">
+        
+        <meta name="referrer" content="no-referrer-when-downgrade">
+
+        
+
+        
+    
+    <meta property="og:site_name" content="freeCodeCamp.org">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog - freeCodeCamp.org">
+    <meta property="og:description" content="Browse thousands of programming tutorials written by experts. Learn Web Development, Data Science, DevOps, Security, and get developer career advice.">
+    <meta property="og:url" content="https://www.freecodecamp.org/news/tag/blog/">
+    <meta property="og:image" content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png">
+    <meta property="article:publisher" content="https://www.facebook.com/freecodecamp">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - freeCodeCamp.org">
+    <meta name="twitter:description" content="Browse thousands of programming tutorials written by experts. Learn Web Development, Data Science, DevOps, Security, and get developer career advice.">
+    <meta name="twitter:url" content="https://www.freecodecamp.org/news/tag/blog/">
+    <meta name="twitter:image" content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png">
+    <meta name="twitter:site" content="@freecodecamp">
+
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+
+
+        
+    <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "Series",
+	"publisher": {
+		"@type": "Organization",
+		"name": "freeCodeCamp.org",
+		"url": "https://www.freecodecamp.org/news/",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg",
+			"width": 2100,
+			"height": 240
+		}
+	},
+	"url": "https://www.freecodecamp.org/news/tag/blog/",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "https://www.freecodecamp.org/news/"
+	},
+	"name": "Blog"
+}</script>
+
+
+        <meta name="generator" content="Eleventy">
+        <link rel="alternate" type="application/rss+xml" title="freeCodeCamp.org" href="https://www.freecodecamp.org/news/rss/">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+<!-- Web Monetization (https://webmonetization.org/) -->
+<meta name="monetization" content="$ilp.uphold.com/LJmbPn7WD4JB">
+<!-- end Web Monetization -->
+
+<!-- dataLayer setup -->
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- End dataLayer setup -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5D6RKKP');</script>
+<!-- End Google Tag Manager -->
+
+
+<meta name="google-site-verification" content="b4tITLzEeeZGEpvD4mGNf3khKM4fvqejQaz9SYBQP8E" />
+
+        
+    </head>
+    
+    
+        <body class="home-template">
+    
+        <div class="site-wrapper">
+            <nav class="site-nav nav-padding">
+    <div class="site-nav-left">
+        
+<form id="search-form" data-test-label="search-bar">
+    <div role="search" class="searchbox__wrapper">
+        <label class="fcc_sr_only" for='search-input'>
+            Search
+        </label>
+        <input type="search" placeholder="
+    Search 9,700+ tutorials
+" id="search-input" />
+        <button type="submit" class="ais-SearchBox-submit">
+            <svg class="ais-SearchBox-submitIcon" xmlns="https://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40">
+    <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z" />
+</svg>
+
+            <span class="fcc_sr_only">Submit your search query</span>
+        </button>
+        <div id='dropdown-container'></div>
+    </div>
+</form>
+
+    </div>
+    <div class="site-nav-middle">
+        <a class="site-nav-logo" href="https://www.freecodecamp.org/news" data-test-label="site-nav-logo"><img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp.org" /></a>
+    </div>
+    <div class="site-nav-right">
+        <div class="nav-group">
+            <a
+                class="nav-forum"
+                id="nav-forum"
+                rel="noopener noreferrer"
+                href="https://forum.freecodecamp.org/"
+                target="_blank"
+                data-test-label="forum-button"
+            >Forum</a>
+            <a
+                class="toggle-button-nav"
+                id="nav-donate"
+                rel="noopener noreferrer"
+                href="https://www.freecodecamp.org/donate/"
+                target="_blank"
+                data-test-label="donate-button"
+            >Donate</a>
+        </div>
+    </div>
+</nav>
+
+
+            
+            <a class="banner" id="banner" data-test-label="banner" rel="noopener noreferrer" target="_blank">
+    <p id="banner-text"></p>
+</a>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("banner"),t=document.getElementById("banner-text");isAuthenticated?(t.innerHTML="Support our charity and our mission. <span>Donate to freeCodeCamp.org</span>.",e.href="https://www.freecodecamp.org/donate",e.setAttribute("text-variation","authenticated")):isDonor?(t.innerHTML="Thank you for supporting freeCodeCamp through <span>your donations</span>.",e.href="https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp/",e.setAttribute("text-variation","donor")):(t.innerHTML="Learn to code — <span>free 3,000-hour curriculum</span>",e.href="https://www.freecodecamp.org/",e.setAttribute("text-variation","default"))}));</script>
+
+
+            <div id="error-message"></div>
+
+            
+    <div class="under-header-content">
+        <h1 dir="ltr" data-test-label="tag-name" class="site-title tags-title">#BLOG</h1>
+        <h2 class="site-description" data-test-label="tag-post-count">
+            
+                A collection of 23 posts
+            
+        </h2>
+        
+        <div class="tags-row">
+            
+                <a class='tag' href="/news/tag/programming/">
+                    <h3 dir="ltr">#Programming <small> | 2774</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/tech/">
+                    <h3 dir="ltr">#Tech <small> | 2748</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/javascript/">
+                    <h3 dir="ltr">#JavaScript <small> | 2170</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/web-development/">
+                    <h3 dir="ltr">#Web Development <small> | 1855</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/technology/">
+                    <h3 dir="ltr">#Technology <small> | 1717</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/react/">
+                    <h3 dir="ltr">#React <small> | 812</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/python/">
+                    <h3 dir="ltr">#Python <small> | 723</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/startup/">
+                    <h3 dir="ltr">#Startup <small> | 721</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/software-development/">
+                    <h3 dir="ltr">#Software Development <small> | 639</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/design/">
+                    <h3 dir="ltr">#Design <small> | 568</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/life-lessons/">
+                    <h3 dir="ltr">#Life Lessons <small> | 536</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/productivity/">
+                    <h3 dir="ltr">#Productivity <small> | 522</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/youtube/">
+                    <h3 dir="ltr">#YouTube <small> | 478</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/self-improvement/">
+                    <h3 dir="ltr">#Self Improvement <small> | 471</small></h3>
+                </a>
+            
+                <a class='tag' href="/news/tag/css/">
+                    <h3 dir="ltr">#CSS <small> | 425</small></h3>
+                </a>
+            
+        </div>
+    </div>
+    <main id="site-main" class="site-main outer">
+        <div class="inner">
+            <section class="post-feed">
+                
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-build-a-table-of-contents-component/" aria-label="How to Build a Table of Contents Component for Your Blog">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/02/toc.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2023/02/toc.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2023/02/toc.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/toc.jpg 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/toc.jpg"
+      class="post-card-image"
+      alt="How to Build a Table of Contents Component for Your Blog"
+      width="2000"
+      height="1125"
+      onerror="this.style.display='none'"
+      
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/react/">
+                                #React
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-build-a-table-of-contents-component/">
+                            How to Build a Table of Contents Component for Your Blog
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/calebolojo/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2022/07/20220718_161734.jpg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2022/07/20220718_161734.jpg"
+      class="author-profile-image"
+      alt="Caleb Olojo"
+      width="2000"
+      height="2667"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/calebolojo/" data-test-label="profile-link">
+                
+                    Caleb Olojo
+                
+            </a>
+            <time class="meta-item" datetime="Fri Mar 03 2023 14:54:50 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                15 days ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-add-categories-to-ruby-on-rails-apps/" aria-label="How to Add Categories to a Ruby on Rails Application">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/02/fcccat.png 300w,https://www.freecodecamp.org/news/content/images/size/w600/2023/02/fcccat.png 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2023/02/fcccat.png 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/fcccat.png 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/fcccat.png"
+      class="post-card-image"
+      alt="How to Add Categories to a Ruby on Rails Application"
+      width="1200"
+      height="628"
+      onerror="this.style.display='none'"
+      
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/ruby-on-rails/">
+                                #Ruby on Rails
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-add-categories-to-ruby-on-rails-apps/">
+                            How to Add Categories to a Ruby on Rails Application
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/sampurna/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2022/01/271727688_704150700590667_6817767580764112258_n.jpg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2022/01/271727688_704150700590667_6817767580764112258_n.jpg"
+      class="author-profile-image"
+      alt="Sampurna Chapagain"
+      width="750"
+      height="1000"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/sampurna/" data-test-label="profile-link">
+                
+                    Sampurna Chapagain
+                
+            </a>
+            <time class="meta-item" datetime="Wed Mar 01 2023 23:31:16 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                17 days ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-build-a-ghost-cms-theme/" aria-label="How to Build a Custom Ghost CMS Theme">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/08/ghost-theme-development-.png 300w,https://www.freecodecamp.org/news/content/images/size/w600/2022/08/ghost-theme-development-.png 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2022/08/ghost-theme-development-.png 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/ghost-theme-development-.png 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/ghost-theme-development-.png"
+      class="post-card-image"
+      alt="How to Build a Custom Ghost CMS Theme"
+      width="2000"
+      height="1000"
+      onerror="this.style.display='none'"
+      
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/projects/">
+                                #Projects
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-build-a-ghost-cms-theme/">
+                            How to Build a Custom Ghost CMS Theme
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/officialrajdeepsingh/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2022/09/91077642_1124696137887112_6649358657022590976_n.jpg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2022/09/91077642_1124696137887112_6649358657022590976_n.jpg"
+      class="author-profile-image"
+      alt="Rajdeep Singh"
+      width="284"
+      height="300"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/officialrajdeepsingh/" data-test-label="profile-link">
+                
+                    Rajdeep Singh
+                
+            </a>
+            <time class="meta-item" datetime="Wed Jan 04 2023 15:20:24 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                2 months ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-create-a-blog-with-deno/" aria-label="How to Create a Static Markdown Blog with Deno and Deploy It">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/09/Create-a-Static-Markdown-Blog-with-Deno--1-.png 300w,https://www.freecodecamp.org/news/content/images/size/w600/2022/09/Create-a-Static-Markdown-Blog-with-Deno--1-.png 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2022/09/Create-a-Static-Markdown-Blog-with-Deno--1-.png 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Create-a-Static-Markdown-Blog-with-Deno--1-.png 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Create-a-Static-Markdown-Blog-with-Deno--1-.png"
+      class="post-card-image"
+      alt="How to Create a Static Markdown Blog with Deno and Deploy It"
+      width="2000"
+      height="1000"
+      onerror="this.style.display='none'"
+      
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/deno/">
+                                #deno
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-create-a-blog-with-deno/">
+                            How to Create a Static Markdown Blog with Deno and Deploy It
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/officialrajdeepsingh/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2022/09/91077642_1124696137887112_6649358657022590976_n.jpg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2022/09/91077642_1124696137887112_6649358657022590976_n.jpg"
+      class="author-profile-image"
+      alt="Rajdeep Singh"
+      width="284"
+      height="300"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/officialrajdeepsingh/" data-test-label="profile-link">
+                
+                    Rajdeep Singh
+                
+            </a>
+            <time class="meta-item" datetime="Tue Sep 13 2022 16:46:28 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                6 months ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/github-discussions-as-chat-system/" aria-label="How to Use GitHub Discussions as Your Blog&#39;s Chat System">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/05/GitHub-Discussions-as-chat-system-1.png 300w,https://www.freecodecamp.org/news/content/images/size/w600/2022/05/GitHub-Discussions-as-chat-system-1.png 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2022/05/GitHub-Discussions-as-chat-system-1.png 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/GitHub-Discussions-as-chat-system-1.png 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/GitHub-Discussions-as-chat-system-1.png"
+      class="post-card-image"
+      alt="How to Use GitHub Discussions as Your Blog&#39;s Chat System"
+      width="1600"
+      height="840"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/github/">
+                                #Github
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/github-discussions-as-chat-system/">
+                            How to Use GitHub Discussions as Your Blog&#39;s Chat System
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/rakesh/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2022/04/WhatsApp-Image-2022-03-15-at-3.57.34-PM.jpeg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2022/04/WhatsApp-Image-2022-03-15-at-3.57.34-PM.jpeg"
+      class="author-profile-image"
+      alt="Rakesh Potnuru"
+      width="1536"
+      height="1591"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/rakesh/" data-test-label="profile-link">
+                
+                    Rakesh Potnuru
+                
+            </a>
+            <time class="meta-item" datetime="Fri May 13 2022 15:48:14 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                10 months ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-build-your-own-blog-with-next-js-and-mdx/" aria-label="How to Build Your Own Blog with Next.js and MDX">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/04/thoughts.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2022/04/thoughts.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2022/04/thoughts.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/thoughts.jpg 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/thoughts.jpg"
+      class="post-card-image"
+      alt="How to Build Your Own Blog with Next.js and MDX"
+      width="2000"
+      height="1333"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/blog/">
+                                #Blog
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-build-your-own-blog-with-next-js-and-mdx/">
+                            How to Build Your Own Blog with Next.js and MDX
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/calebolojo/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2022/07/20220718_161734.jpg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2022/07/20220718_161734.jpg"
+      class="author-profile-image"
+      alt="Caleb Olojo"
+      width="2000"
+      height="2667"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/calebolojo/" data-test-label="profile-link">
+                
+                    Caleb Olojo
+                
+            </a>
+            <time class="meta-item" datetime="Thu Apr 21 2022 02:28:29 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                a year ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/chose-a-cms-wordpress-vs-shopify-vs-ghost/" aria-label="How to Choose a CMS – WordPress vs Ghost vs Shopify">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/01/WordPress-vs-Ghost-vs-Shopify.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2022/01/WordPress-vs-Ghost-vs-Shopify.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2022/01/WordPress-vs-Ghost-vs-Shopify.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/WordPress-vs-Ghost-vs-Shopify.jpg 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/WordPress-vs-Ghost-vs-Shopify.jpg"
+      class="post-card-image"
+      alt="How to Choose a CMS – WordPress vs Ghost vs Shopify"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/cms/">
+                                #CMS
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/chose-a-cms-wordpress-vs-shopify-vs-ghost/">
+                            How to Choose a CMS – WordPress vs Ghost vs Shopify
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/edan/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2021/09/lsGkrZIQ_400x400.jpg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2021/09/lsGkrZIQ_400x400.jpg"
+      class="author-profile-image"
+      alt="Edan Ben-Atar"
+      width="241"
+      height="241"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/edan/" data-test-label="profile-link">
+                
+                    Edan Ben-Atar
+                
+            </a>
+            <time class="meta-item" datetime="Wed Feb 02 2022 17:05:13 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                a year ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-start-a-blog-book/" aria-label="How to Start a Blog [Free 70-Page Book]">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2021/10/how-to-start-a-blog.png 300w,https://www.freecodecamp.org/news/content/images/size/w600/2021/10/how-to-start-a-blog.png 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2021/10/how-to-start-a-blog.png 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2021/10/how-to-start-a-blog.png 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/10/how-to-start-a-blog.png"
+      class="post-card-image"
+      alt="How to Start a Blog [Free 70-Page Book]"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/blog/">
+                                #Blog
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-start-a-blog-book/">
+                            How to Start a Blog [Free 70-Page Book]
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/flavio/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2021/05/flavio-copes-gravatar.jpeg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2021/05/flavio-copes-gravatar.jpeg"
+      class="author-profile-image"
+      alt="Flavio Copes"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/flavio/" data-test-label="profile-link">
+                
+                    Flavio Copes
+                
+            </a>
+            <time class="meta-item" datetime="Mon Oct 11 2021 17:21:00 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                a year ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/technical-blogging-basics/" aria-label="Technical Blogging Basics – How to Write Articles as a Developer">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2021/04/freeCodeCamp-Cover-3.png 300w,https://www.freecodecamp.org/news/content/images/size/w600/2021/04/freeCodeCamp-Cover-3.png 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2021/04/freeCodeCamp-Cover-3.png 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/freeCodeCamp-Cover-3.png 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/freeCodeCamp-Cover-3.png"
+      class="post-card-image"
+      alt="Technical Blogging Basics – How to Write Articles as a Developer"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/blogging/">
+                                #Blogging
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/technical-blogging-basics/">
+                            Technical Blogging Basics – How to Write Articles as a Developer
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/tapas/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2022/02/4AE84473-6762-4606-BBD3-A77E1BBE1188.jpeg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2022/02/4AE84473-6762-4606-BBD3-A77E1BBE1188.jpeg"
+      class="author-profile-image"
+      alt="TAPAS ADHIKARY"
+      width="2000"
+      height="2000"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/tapas/" data-test-label="profile-link">
+                
+                    TAPAS ADHIKARY
+                
+            </a>
+            <time class="meta-item" datetime="Thu Apr 15 2021 16:35:42 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                2 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/gatsby-blog-header-image-twitter-card/" aria-label="Gatsby Starter Blog: How to Add Header Images to Posts with Support for Twitter Cards">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/12/freeCodeCamp-GatsbyBlogImageTwitterCard-5.png 300w,https://www.freecodecamp.org/news/content/images/size/w600/2020/12/freeCodeCamp-GatsbyBlogImageTwitterCard-5.png 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2020/12/freeCodeCamp-GatsbyBlogImageTwitterCard-5.png 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2020/12/freeCodeCamp-GatsbyBlogImageTwitterCard-5.png 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/12/freeCodeCamp-GatsbyBlogImageTwitterCard-5.png"
+      class="post-card-image"
+      alt="Gatsby Starter Blog: How to Add Header Images to Posts with Support for Twitter Cards"
+      width="1200"
+      height="600"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/gatsby/">
+                                #Gatsby
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/gatsby-blog-header-image-twitter-card/">
+                            Gatsby Starter Blog: How to Add Header Images to Posts with Support for Twitter Cards
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/david-good/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2020/12/David_Good_Headshot.JPG 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2020/12/David_Good_Headshot.JPG"
+      class="author-profile-image"
+      alt="David Good"
+      width="472"
+      height="473"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/david-good/" data-test-label="profile-link">
+                
+                    David Good
+                
+            </a>
+            <time class="meta-item" datetime="Tue Dec 29 2020 00:33:15 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                2 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-start-a-blog-with-wordpress/" aria-label="How to Start a Blog for Free with WordPress – Tutorial for Beginners">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/11/wordpress-589121_1920.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2020/11/wordpress-589121_1920.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2020/11/wordpress-589121_1920.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/wordpress-589121_1920.jpg 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/wordpress-589121_1920.jpg"
+      class="post-card-image"
+      alt="How to Start a Blog for Free with WordPress – Tutorial for Beginners"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/blogging/">
+                                #Blogging
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-start-a-blog-with-wordpress/">
+                            How to Start a Blog for Free with WordPress – Tutorial for Beginners
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/jim/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2023/03/jim-sq-close.jpg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2023/03/jim-sq-close.jpg"
+      class="author-profile-image"
+      alt="Jim Campbell"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/jim/" data-test-label="profile-link">
+                
+                    Jim Campbell
+                
+            </a>
+            <time class="meta-item" datetime="Mon Nov 30 2020 17:54:27 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                2 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-build-a-blog-with-gatsby-and-netlify-cms/" aria-label="How to Build a Blog with Gatsby and Netlify CMS – A Complete Guide">
+                
+    <img
+      srcset="https://cdn-media-2.freecodecamp.org/w1280/5f9c984e740569d1a4ca1946.jpg"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://cdn-media-2.freecodecamp.org/w1280/5f9c984e740569d1a4ca1946.jpg"
+      class="post-card-image"
+      alt="How to Build a Blog with Gatsby and Netlify CMS – A Complete Guide"
+      width="1280"
+      height="853"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/web-development/">
+                                #Web Development
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-build-a-blog-with-gatsby-and-netlify-cms/">
+                            How to Build a Blog with Gatsby and Netlify CMS – A Complete Guide
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/mohammedasker/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2020/09/guywithglasses.jpg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2020/09/guywithglasses.jpg"
+      class="author-profile-image"
+      alt="Mohammed Asker"
+      width="1789"
+      height="2081"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/mohammedasker/" data-test-label="profile-link">
+                
+                    Mohammed Asker
+                
+            </a>
+            <time class="meta-item" datetime="Tue Oct 06 2020 15:16:00 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                2 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-grow-your-audience-and-share-your-content-with-the-world/" aria-label="How to Grow Your Audience and Share Your Content with the World">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/06/grow-audience.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2020/06/grow-audience.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2020/06/grow-audience.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/grow-audience.jpg 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/grow-audience.jpg"
+      class="post-card-image"
+      alt="How to Grow Your Audience and Share Your Content with the World"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/writing/">
+                                #Writing
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-grow-your-audience-and-share-your-content-with-the-world/">
+                            How to Grow Your Audience and Share Your Content with the World
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/colbyfayock/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2020/03/star-wars-hug-yellow-cropped.png 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2020/03/star-wars-hug-yellow-cropped.png"
+      class="author-profile-image"
+      alt="Colby Fayock"
+      width="402"
+      height="403"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/colbyfayock/" data-test-label="profile-link">
+                
+                    Colby Fayock
+                
+            </a>
+            <time class="meta-item" datetime="Thu Jun 11 2020 14:45:00 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                3 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/overcoming-your-fear-of-writing-and-how-you-can-find-motivation/" aria-label="How to Overcome Your Fear of Writing and Find Motivation to Start">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/04/writing-1.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2020/04/writing-1.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2020/04/writing-1.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/writing-1.jpg 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/writing-1.jpg"
+      class="post-card-image"
+      alt="How to Overcome Your Fear of Writing and Find Motivation to Start"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/self-improvement/">
+                                #Self Improvement
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/overcoming-your-fear-of-writing-and-how-you-can-find-motivation/">
+                            How to Overcome Your Fear of Writing and Find Motivation to Start
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/colbyfayock/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2020/03/star-wars-hug-yellow-cropped.png 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2020/03/star-wars-hug-yellow-cropped.png"
+      class="author-profile-image"
+      alt="Colby Fayock"
+      width="402"
+      height="403"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/colbyfayock/" data-test-label="profile-link">
+                
+                    Colby Fayock
+                
+            </a>
+            <time class="meta-item" datetime="Thu Apr 30 2020 14:45:00 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                3 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/multiple-choice-quiz-template/" aria-label="How To Embed Multiple Choice Quiz Questions into Your Article">
+                
+    <img
+      srcset="https://cdn-media-2.freecodecamp.org/w1280/5f9c9bc5740569d1a4ca2dcf.jpg"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://cdn-media-2.freecodecamp.org/w1280/5f9c9bc5740569d1a4ca2dcf.jpg"
+      class="post-card-image"
+      alt="How To Embed Multiple Choice Quiz Questions into Your Article"
+      width="1280"
+      height="960"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/blog/">
+                                #Blog
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/multiple-choice-quiz-template/">
+                            How To Embed Multiple Choice Quiz Questions into Your Article
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/alex-arobelidze/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2020/02/fcc-1.JPG 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2020/02/fcc-1.JPG"
+      class="author-profile-image"
+      alt="Alexander Arobelidze"
+      width="2000"
+      height="1500"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/alex-arobelidze/" data-test-label="profile-link">
+                
+                    Alexander Arobelidze
+                
+            </a>
+            <time class="meta-item" datetime="Mon Apr 06 2020 08:30:53 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                3 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-add-a-table-of-contents-to-your-blog-post-or-article/" aria-label="How to Add a Table of Contents to Your Blog Post or Article">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/02/table-of-contents.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2020/02/table-of-contents.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2020/02/table-of-contents.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/table-of-contents.jpg 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/table-of-contents.jpg"
+      class="post-card-image"
+      alt="How to Add a Table of Contents to Your Blog Post or Article"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/writing/">
+                                #Writing
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-add-a-table-of-contents-to-your-blog-post-or-article/">
+                            How to Add a Table of Contents to Your Blog Post or Article
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/colbyfayock/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2020/03/star-wars-hug-yellow-cropped.png 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2020/03/star-wars-hug-yellow-cropped.png"
+      class="author-profile-image"
+      alt="Colby Fayock"
+      width="402"
+      height="403"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/colbyfayock/" data-test-label="profile-link">
+                
+                    Colby Fayock
+                
+            </a>
+            <time class="meta-item" datetime="Wed Feb 12 2020 15:45:00 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                3 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/your-first-hugo-blog-a-practical-guide/" aria-label="How to Create Your First Hugo Blog: a Practical Guide">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/01/Screen-Shot-2020-01-03-at-20.05.40.png 300w,https://www.freecodecamp.org/news/content/images/size/w600/2020/01/Screen-Shot-2020-01-03-at-20.05.40.png 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2020/01/Screen-Shot-2020-01-03-at-20.05.40.png 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/Screen-Shot-2020-01-03-at-20.05.40.png 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/Screen-Shot-2020-01-03-at-20.05.40.png"
+      class="post-card-image"
+      alt="How to Create Your First Hugo Blog: a Practical Guide"
+      width="1243"
+      height="1093"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/hugo/">
+                                #Hugo
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/your-first-hugo-blog-a-practical-guide/">
+                            How to Create Your First Hugo Blog: a Practical Guide
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/flavio/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2021/05/flavio-copes-gravatar.jpeg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2021/05/flavio-copes-gravatar.jpeg"
+      class="author-profile-image"
+      alt="Flavio Copes"
+      width="250"
+      height="250"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/flavio/" data-test-label="profile-link">
+                
+                    Flavio Copes
+                
+            </a>
+            <time class="meta-item" datetime="Wed Jan 08 2020 08:44:58 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                3 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-setup-worry-free-blog-comments-in-20-simple-steps/" aria-label="Brilliant Add-on For Static Sites That Will Make You Dance">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2019/07/Copy-of-Static-Site-Docker-Recipes-2.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2019/07/Copy-of-Static-Site-Docker-Recipes-2.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2019/07/Copy-of-Static-Site-Docker-Recipes-2.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2019/07/Copy-of-Static-Site-Docker-Recipes-2.jpg 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2019/07/Copy-of-Static-Site-Docker-Recipes-2.jpg"
+      class="post-card-image"
+      alt="Brilliant Add-on For Static Sites That Will Make You Dance"
+      width="1000"
+      height="666"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/docker-compose/">
+                                #Docker Compose
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-setup-worry-free-blog-comments-in-20-simple-steps/">
+                            Brilliant Add-on For Static Sites That Will Make You Dance
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/jaredwolff/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2021/05/jared-wolff-gravatar.jpeg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2021/05/jared-wolff-gravatar.jpeg"
+      class="author-profile-image"
+      alt="Jared Wolff"
+      width="250"
+      height="250"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/jaredwolff/" data-test-label="profile-link">
+                
+                    Jared Wolff
+                
+            </a>
+            <time class="meta-item" datetime="Mon Jul 08 2019 12:30:00 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                4 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-automatically-cross-post-from-your-gatsbyjs-blog-with-rss/" aria-label="How to Automatically Cross-post from Your GatsbyJS Blog with RSS">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2019/06/gatsby-rss.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2019/06/gatsby-rss.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2019/06/gatsby-rss.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/gatsby-rss.jpg 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/gatsby-rss.jpg"
+      class="post-card-image"
+      alt="How to Automatically Cross-post from Your GatsbyJS Blog with RSS"
+      width="1920"
+      height="1080"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/gatsby/">
+                                #Gatsby
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-automatically-cross-post-from-your-gatsbyjs-blog-with-rss/">
+                            How to Automatically Cross-post from Your GatsbyJS Blog with RSS
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/dane-stevens/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2019/06/profile-pic.jpg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2019/06/profile-pic.jpg"
+      class="author-profile-image"
+      alt="Dane Stevens"
+      width="316"
+      height="316"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/dane-stevens/" data-test-label="profile-link">
+                
+                    Dane Stevens
+                
+            </a>
+            <time class="meta-item" datetime="Tue Jun 11 2019 18:45:27 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                4 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/convert-the-gatsby-default-starter-blog-to-use-mdx/" aria-label="Convert the Gatsby default starter blog to use MDX">
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w300/2019/06/cover-6.png 300w,https://www.freecodecamp.org/news/content/images/size/w600/2019/06/cover-6.png 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2019/06/cover-6.png 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/cover-6.png 2000w"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/cover-6.png"
+      class="post-card-image"
+      alt="Convert the Gatsby default starter blog to use MDX"
+      width="1350"
+      height="900"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/gatsby/">
+                                #Gatsby
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/convert-the-gatsby-default-starter-blog-to-use-mdx/">
+                            Convert the Gatsby default starter blog to use MDX
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/scott/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2019/11/spencee.png 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2019/11/spencee.png"
+      class="author-profile-image"
+      alt="Scott Spence"
+      width="1100"
+      height="1100"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/scott/" data-test-label="profile-link">
+                
+                    Scott Spence
+                
+            </a>
+            <time class="meta-item" datetime="Tue Apr 09 2019 17:18:00 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                4 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/how-to-write-a-blog-using-gatsby-from-your-phone-e92a99851a04/" aria-label="How to use Gatsby to create your blog and work on it from your phone">
+                
+    <img
+      srcset="https://cdn-media-1.freecodecamp.org/images/1*YFDeSO9ljiYaszZk1FXm8Q.jpeg"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://cdn-media-1.freecodecamp.org/images/1*YFDeSO9ljiYaszZk1FXm8Q.jpeg"
+      class="post-card-image"
+      alt="How to use Gatsby to create your blog and work on it from your phone"
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/github/">
+                                #Github
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-write-a-blog-using-gatsby-from-your-phone-e92a99851a04/">
+                            How to use Gatsby to create your blog and work on it from your phone
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="Wed Apr 18 2018 09:46:27 GMT+0000 (Coordinated Universal Time)">5 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/every-developer-should-have-a-blog-heres-why-and-how-to-stick-with-it-5fd55a247fbf/" aria-label="Every developer should have a blog. Here’s why, and how to stick with it.">
+                
+    <img
+      srcset="https://cdn-media-1.freecodecamp.org/images/1*SnptA4K2xnDL0tn7X9V1RQ.jpeg"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://cdn-media-1.freecodecamp.org/images/1*SnptA4K2xnDL0tn7X9V1RQ.jpeg"
+      class="post-card-image"
+      alt="Every developer should have a blog. Here’s why, and how to stick with it."
+      width="600"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/blog/">
+                                #Blog
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/every-developer-should-have-a-blog-heres-why-and-how-to-stick-with-it-5fd55a247fbf/">
+                            Every developer should have a blog. Here’s why, and how to stick with it.
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/flavio/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2021/05/flavio-copes-gravatar.jpeg 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2021/05/flavio-copes-gravatar.jpeg"
+      class="author-profile-image"
+      alt="Flavio Copes"
+      width="250"
+      height="250"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/flavio/" data-test-label="profile-link">
+                
+                    Flavio Copes
+                
+            </a>
+            <time class="meta-item" datetime="Mon Apr 16 2018 23:24:29 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                5 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        
+            <a class="post-card-image-link" href="/news/get-a-blog-on-your-website-with-react-and-wordpress-api-c63ff81b388e/" aria-label="Get a blog on your website with React and WordPress API">
+                
+    <img
+      srcset="https://cdn-media-1.freecodecamp.org/images/1*ElZM2hjwYLDE29GCAmYxoA.jpeg"
+      sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw"
+      src="https://cdn-media-1.freecodecamp.org/images/1*ElZM2hjwYLDE29GCAmYxoA.jpeg"
+      class="post-card-image"
+      alt="Get a blog on your website with React and WordPress API"
+      width="800"
+      height="533"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="feature-image"
+    />
+  
+            </a>
+        
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr"  href="/news/tag/react/">
+                                #React
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/get-a-blog-on-your-website-with-react-and-wordpress-api-c63ff81b388e/">
+                            Get a blog on your website with React and WordPress API
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+    
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/sam-williams/" class="static-avatar">
+            
+                
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w30/2020/07/headshot-square.png 30w"
+      sizes="30px"
+      src="https://www.freecodecamp.org/news/content/images/size/w30/2020/07/headshot-square.png"
+      class="author-profile-image"
+      alt="Sam Williams"
+      width="1364"
+      height="1215"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/sam-williams/" data-test-label="profile-link">
+                
+                    Sam Williams
+                
+            </a>
+            <time class="meta-item" datetime="Tue Dec 26 2017 11:01:05 GMT+0000 (Coordinated Universal Time)" data-test-label="post-published-time">
+                5 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                
+            </section>
+            
+
+        </div>
+    </main>
+
+
+            
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-desc-col">
+                <p data-test-label="tax-exempt-status">freeCodeCamp is a donor-supported tax-exempt 501(c)(3) charity organization (United States Federal Tax Identification Number: 82-0779546)</p>
+                <p data-test-label="mission-statement">Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world.</p>
+                <p data-test-label="donation-initiatives">Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.</p>
+                <p class="footer-donation" data-test-label="donate-text">
+                    You can <a href="https://www.freecodecamp.org/donate/" class="inline" rel="noopener noreferrer" target="_blank" >make a tax-deductible donation here</a>.
+                </p>
+            </div>
+            <div class="trending-guides" data-test-label="trending-guides">
+                <div class="col-header">Trending Guides</div>
+                <div class="trending-guides-row">
+                    <div class="footer-col footer-col-1">
+                        <a href="https://www.freecodecamp.org/news/hello-world-in-java-example-program/" rel="noopener noreferrer" target="_blank">Hello World in Java
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-the-429-too-many-requests-http-error/" rel="noopener noreferrer" target="_blank">What is a 429 Error?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/inline-style-in-html/" rel="noopener noreferrer" target="_blank">Inline Style in HTML
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-absolute-value-python-abs-tutorial/" rel="noopener noreferrer" target="_blank">Python Absolute Value
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/java-switch-statement-how-to-use-a-switch-case-in-java/" rel="noopener noreferrer" target="_blank">Java Switch Statement
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-change-font-with-html/" rel="noopener noreferrer" target="_blank">Change Font with HTML
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/error-502-bad-gateway-meaning/" rel="noopener noreferrer" target="_blank">502 Bad Gateway Error
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/why-static-in-java-what-does-this-keyword-mean/" rel="noopener noreferrer" target="_blank">Static Keyword in Java
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/javascript-convert-string-to-number-js-string-to-int-example/" rel="noopener noreferrer" target="_blank">String to Number in JS
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/global-variable-in-python-non-local-python-variables/" rel="noopener noreferrer" target="_blank">Python Global Variable
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-2">
+                        <a href="https://www.freecodecamp.org/news/python-set-how-to-create-sets-in-python/" rel="noopener noreferrer" target="_blank">Python Set
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-rest-rest-api-definition-for-beginners/" rel="noopener noreferrer" target="_blank">What is REST?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/crud-operations-explained/" rel="noopener noreferrer" target="_blank">What is CRUD?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/2f-in-python-what-does-it-mean/" rel="noopener noreferrer" target="_blank">%.2f in Python
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/git-reset-origin-how-to-reset-a-local-branch-to-remote-tracking-branch/" rel="noopener noreferrer" target="_blank">Git Reset Origin
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-localhost/" rel="noopener noreferrer" target="_blank">What is Localhost?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/check-if-an-item-is-in-an-array-in-javascript-js-contains-with-array-includes/" rel="noopener noreferrer" target="_blank">JS Array.includes()
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/javascript-date-comparison-how-to-compare-dates-in-js/" rel="noopener noreferrer" target="_blank">Compare Dates in JS
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-split-a-string-in-python/" rel="noopener noreferrer" target="_blank">Python Split String
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-enumerate-what-is-the-enumerate-function-in-python/" rel="noopener noreferrer" target="_blank">Python enumerate()
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-3">
+                        <div class="footer-left">
+                            <a href="https://www.freecodecamp.org/news/how-to-create-a-set-in-python/" rel="noopener noreferrer" target="_blank">Create a Set in Python
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/how-to-remove-a-directory-in-linux/" rel="noopener noreferrer" target="_blank">Remove a Dir in Linux
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/what-is-coding-used-for/" rel="noopener noreferrer" target="_blank">What is Coding Used For?
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/javascript-string-format-how-to-format-strings-in-js/" rel="noopener noreferrer" target="_blank">JavaScript String Format
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/javascript-string-to-date-date-parsing-in-js/" rel="noopener noreferrer" target="_blank">JavaScript String to Date
+                            </a>
+                        </div>
+
+                        <div class="footer-right">
+                            <a href="https://www.freecodecamp.org/news/what-does-a-data-analyst-do-data-analyst-job-description/" rel="noopener noreferrer" target="_blank">What’s a Data Analyst Do?
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial/" rel="noopener noreferrer" target="_blank">Refresh Page in JavaScript
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/remove-underline-from-link-in-css/" rel="noopener noreferrer" target="_blank">Remove Underline from Link
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/how-to-clear-a-javascript-array-js-empty-array/" rel="noopener noreferrer" target="_blank">How to Clear an Array in JS
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/javascript-capitalize-first-letter-of-word/" rel="noopener noreferrer" target="_blank">Capitalize 1st Letter in JS
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="col-header" data-test-label="our-nonprofit">Our Charity</div>
+            <div class="footer-divider"></div>
+            <div class="our-nonprofit">
+                <a href="https://www.freecodecamp.org/news/about/" rel="noopener noreferrer" target="_blank" data-test-label="about">
+                    About
+                </a>
+                <a href="https://www.linkedin.com/school/free-code-camp/people/" rel="noopener noreferrer" target="_blank" data-test-label="alumni">
+                    Alumni Network
+                </a>
+                <a href="https://github.com/freeCodeCamp/" rel="noopener noreferrer" target="_blank" data-test-label="open-source">
+                    Open Source
+                </a>
+                <a href="https://www.freecodecamp.org/news/shop/" rel="noopener noreferrer" target="_blank" data-test-label="shop">
+                    Shop
+                </a>
+                <a href="https://www.freecodecamp.org/news/support/" rel="noopener noreferrer" target="_blank" data-test-label="support">
+                    Support
+                </a>
+                <a href="https://www.freecodecamp.org/news/sponsors/" rel="noopener noreferrer" target="_blank" data-test-label="sponsors">
+                    Sponsors
+                </a>
+                <a href="https://www.freecodecamp.org/news/academic-honesty-policy/" rel="noopener noreferrer" target="_blank" data-test-label="honesty">
+                    Academic Honesty
+                </a>
+                <a href="https://www.freecodecamp.org/news/code-of-conduct/" rel="noopener noreferrer" target="_blank" data-test-label="coc">
+                    Code of Conduct
+                </a>
+                <a href="https://www.freecodecamp.org/news/privacy-policy/" rel="noopener noreferrer" target="_blank" data-test-label="privacy">
+                    Privacy Policy
+                </a>
+                <a href="https://www.freecodecamp.org/news/terms-of-service/" rel="noopener noreferrer" target="_blank" data-test-label="tos">
+                    Terms of Service
+                </a>
+                <a href="https://www.freecodecamp.org/news/copyright-policy/" rel="noopener noreferrer" target="_blank" data-test-label="copyright">
+                    Copyright Policy
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D6RKKP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+        
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"7a9e9e4b59603fbf","token":"bdb993c6dde44e178aabd9555e75e4f4","version":"2023.2.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
