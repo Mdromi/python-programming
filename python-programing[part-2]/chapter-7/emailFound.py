@@ -1,4 +1,4 @@
-# python3 chapter-7/email.py
+# python3 chapter-7/emailFound.py
 
 import re
 
