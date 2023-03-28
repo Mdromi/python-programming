@@ -5,6 +5,8 @@ __pycache__/
 
 # personal data
 data
+*.csv
+book_crawler.log
 
 # C extensions
 *.so
