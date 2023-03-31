@@ -5,6 +5,7 @@ import requests
 import re
 import sys
 import csv
+from html import unescape
 
 def get_category_list(content):
     """get_category_list takes content of home page and returns a list of categories and their urls"""
@@ -12,11 +13,48 @@ def get_category_list(content):
 
 def get_book_list(content):
     """get_book_list takes content of book list page and returns a list of books (name and url)"""
-    pass
+    content = content.replace('\n', ' ')
+    return book_list_pat.findall(content)
 
 def get_product_details(content):
     """get_product_details takes content of product page, press the page and returns details about a product"""
-    pass
+    image_base = 'http://books.toscrape.com/'
+    result = img_pat.findall(content)
+    if len(result) == 0:
+        logging.warn('Image url not found!')
+        image_url = ''
+    else:
+        image_url = result[0]
+        image_url = image_url.replace('../../', '')
+        image_url = image_base + image_url
+    result = desc_pat.findall(content)
+    if len(result) == 0:
+        logging.warning('Description not found!')
+        description = ''
+    else:
+        description = unescape(result[0])
+    
+    result = upc_pat.findall(content)
+    if len(result) == 0:
+        logging.warning('UPC not found!')
+        upc = ''
+    else:
+        upc = result[0]
+    result = price_pat.findall(content)
+    if len(result) == 0:
+        logging.warning('Price not found!')
+        price = ''
+    else:
+        price = result[0]
+    result = avail_pat.findall(content)
+    if len(result) == 0:
+        logging.warning('Availability not found!')
+        availability = ''
+    else:
+        availability = result[0]
+    
+    return upc, price, image_url, availability, description
+    
 
 def get_page_content(url):
     """get_page_content takes a url and return the content of the page"""
@@ -29,9 +67,9 @@ def get_page_content(url):
         return response.text
     
     logging.error('Can not get content from URL:' + url)
-    return None
+    return ''
 
-def get_next_page(content):
+def get_next_page(url, content):
     """checks the content of the book list page and return link of the next page, return None, if there is no more next page"""
     result = next_page_pat.findall(content)
     if len(result) == 0:
@@ -41,6 +79,28 @@ def get_next_page(content):
 
 def scrape_book_info(book_info, category_name):
     """gets the content of a book details page, and press different components and store the info"""
+    book_url, book_name = book_info
+    book_name = unescape(book_name)
+    book_dict = {'Name': book_name, 'Category': category_name}
+
+    book_url = book_url.replace('../../../', '')
+    book_url = 'http://books.toscrape.com/catalogue/' + book_url
+    book_dict['URL'] = book_url
+
+    # print('Scraping Book', book_name)
+    logging.info('Scraping: ' + book_url)
+
+    content = get_page_content(book_url)
+    content = content.replace('\n', ' ')
+
+    upc, price, image_url, availability, description = get_product_details(content)
+    book_dict['UPC'] = upc
+    book_dict['Price'] = price
+    book_dict['ImageURL'] = image_url
+    book_dict['Availability'] = availability
+    book_dict['Description'] = description 
+    print('book_dict', book_dict)
+    csv_writer.writerow(book_dict)
 
 def crawl_category(category_name, category_url):
     """crawl a particular category of books"""
@@ -51,8 +111,10 @@ def crawl_category(category_name, category_url):
         for book in bool_list:
             scrape_book_info(book, category_name)
         
-        if get_next_page(content) is None:
+        next_page = get_next_page(category_url, content)
+        if next_page is None:
             break
+        category_url = next_page
 
 def crawl_website():
     """crawl_website() is the main function that coordinates the whole crawling task"""
@@ -60,7 +122,7 @@ def crawl_website():
     host_name = 'books.toscrape.com'
 
     content = get_page_content(url)
-    if content is None:
+    if content == '':
         logging.critical('Failed to get content from ' + url)
         sys.exit(1)
 
@@ -69,8 +131,7 @@ def crawl_website():
     for category in category_list:
         category_url, category_name = category 
         category_url = 'http://' + host_name + '/' + category_url
-        print(category_url)
-        sys.exit(1)
+        # print(category_url)
         crawl_category(category_name, category_url)
 
 
@@ -78,10 +139,18 @@ if __name__ == '__main__':
     # Compile different regular expression patterns
     category_pat = re.compile(r'<li>\s*<a href="(catalogue/category/books/.*?)">\s*(\w+[\s\w]+\w)\s*?<', re.M | re.DOTALL)
     next_page_pat = re.compile(r'<li class="next"><a href="(.*?)">next</a></li>')
+    book_list_pat = re.compile(r'<h3><a href="(.*?)" title="(.*?)">')
+    img_pat = re.compile(r'<div class="item active">\s*<img src="(.*?)"')
+    desc_pat = re.compile(r'<div id="product_description" class="sub-header">.*?<p>(.*?)</p>')
+    upc_pat = re.compile(r'<th>UPC</th>\s*<td>(.*?)</td>')
+    price_pat = re.compile(r'<th>Price \(incl. tax\)</th>\s*<td>\D+([\d.]+?)</td>')
+    avail_pat = re.compile(r'<th>Availability</th>\s*<td>(.*?)</td>')
 
     logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', filename='chapter-8/book_crawler.log', level=logging.DEBUG)
 
-    with open("chapter-8/books_list.csv", 'w') as csvf:
-        csv_writer = csv.DictWriter(csvf, fieldnames=['Name', 'Category', 'UPC', 'URL', 'ImageURl', 'Price', 'Availability', 'Description'])
+    with open("chapter-8/books_list.csv", 'w', encoding='ISO-8859-1') as csvf:
+        csv_writer = csv.DictWriter(csvf, fieldnames=['Name', 'Category', 'UPC', 'URL', 'ImageURL', 'Price', 'Availability', 'Description'], extrasaction='ignore', delimiter = ';')
+        # , extrasaction='ignore', delimiter = ';'
         csv_writer.writeheader()
         crawl_website()
+        print('Crawling Done!')
